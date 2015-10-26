@@ -113,11 +113,11 @@ xkb_symbols "evdev" {
 
     key <HNGL>   {      [ Hangul                ]       };
     key <HJCV>   {      [ Hangul_Hanja          ]       };
-    key <FK21>   {      [ XF86TouchpadToggle    ]       };
-    key <FK22>   {      [ XF86TouchpadOn        ]       };
-    key <FK23>   {      [ XF86TouchpadOff       ]       };
+    key <FK21>   {      [ 0x1008FFA9            ]       };
+    key <FK22>   {      [ 0x1008FFB0            ]       };
+    key <FK23>   {      [ 0x1008FFB1            ]       };
 
-    key <FK20>   {      [ XF86AudioMicMute      ]       };
+    key <FK20>   {      [ 0x1008FFB2            ]       };
 
 //  key <I120>   {      [ ]       }; // KEY_MACRO
     key <I126>   {      [ plusminus             ]       };
@@ -1868,10 +1868,16 @@ xkb_symbols "htcdream" {
         key <AE09> { [ 9, 9, parenleft, parenleft ] };
         key <AE10> { [ 0, 0, parenright, parenright ] };
 
-	key <LFSH> { [ Shift_L ] };
+        key <LFSH> {
+            symbols[Group1]= [ Shift_L		],
+            actions[Group1] = [ SetMods(modifiers=Shift, clearLocks) ]
+        };
 	key <SPCE> { [ space ] };
 	key <AB09> { [ period, period, slash, slash ] };
-	key <RTSH> { [ Shift_R ] };
+	key <RTSH> {
+            symbols[Group1]=  [ Shift_R		],
+            actions[Group1] = [ SetMods(modifiers=Shift, clearLocks) ]
+        };
 
 	modifier_map Shift { <LFSH>, <RTSH> };
 };

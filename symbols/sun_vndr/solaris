@@ -108,5 +108,5 @@ xkb_symbols "sun_compat" {
 	key <MUTE> { [  SunAudioMute,        SunVideoDegauss		] };
 	key <VOL-> { [  SunAudioLowerVolume, SunVideoLowerBrightness	] };
 	key <VOL+> { [  SunAudioRaiseVolume, SunVideoRaiseBrightness	] };
-	key <POWR> { [  XF86Sleep,           XF86Hibernate		] };
+	key <POWR> { [  XF86Sleep,           0x1008FFA8     		] };
 };

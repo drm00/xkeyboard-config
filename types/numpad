@@ -1,10 +1,10 @@
 partial default xkb_types "pc" {
     type "KEYPAD" {
-	modifiers = Shift+NumLock;
+	modifiers = Shift+Mod2;
 	map[None] = Level1;
 	map[Shift] = Level2;
-	map[NumLock] = Level2;
-	map[Shift+NumLock] = Level1;
+	map[Mod2] = Level2;
+	map[Shift+Mod2] = Level1;
 	level_name[Level1] = "Base";
 	level_name[Level2] = "Number";
     };
@@ -23,10 +23,10 @@ partial xkb_types "mac" {
 
 partial xkb_types "microsoft" {
     type "KEYPAD" {
-        modifiers = Shift+NumLock;
+        modifiers = Shift+Mod2;
         map[None] = Level1;
         preserve[Shift] = Shift;
-        map[NumLock] = Level2;
+        map[Mod2] = Level2;
         level_name[Level1] = "Base";
         level_name[Level2] = "Number";
     };
@@ -40,27 +40,27 @@ partial xkb_types "microsoft" {
 // FOUR_LEVEL_MIXED_KEYPAD, so that's the one we are going to override.
 partial xkb_types "shift3" {
     type "FOUR_LEVEL_MIXED_KEYPAD" {
-        modifiers = Shift+NumLock+Control+Alt;
+        modifiers = Shift+Mod2+Control+Alt;
 
-        // NumLock Off => navigate using cursor keys
+        // Mod2 Off => navigate using cursor keys
         map[None] = Level1;
 
-        // NumLock Off + Shift pressed => select using cursor keys
+        // Mod2 Off + Shift pressed => select using cursor keys
         preserve[Shift] = Shift;
 
-        // NumLock On => decimal digits
-        map[NumLock] = Level2;
+        // Mod2 On => decimal digits
+        map[Mod2] = Level2;
 
-        // NumLock On + Shift pressed => auxiliary symbols,
+        // Mod2 On + Shift pressed => auxiliary symbols,
         // e.g. hexadecimal digits
-        map[Shift+NumLock] = Level3;
+        map[Shift+Mod2] = Level3;
 
-        // Ctrl + Alt, regardless of NumLock and Shift => command keys
+        // Ctrl + Alt, regardless of Mod2 and Shift => command keys
         map[Control+Alt] = Level4;
 
         // reverse map from levels to modifiers
         level_name[Level1] = "Base";
-        level_name[Level2] = "NumLock";
+        level_name[Level2] = "Mod2";
         level_name[Level3] = "Shift+NumLock";
         level_name[Level4] = "Ctrl+Alt";
     };

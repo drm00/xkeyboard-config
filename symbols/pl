@@ -221,7 +221,7 @@ xkb_symbols "dvp" {
     key <AD10> { [ l,            L,              lstroke,         Lstroke    ] };
 
     // home row, left side
-    key <AC01> { [ a,            A,              aogonek,         Aogonek    ], type[Group1] = "EIGHT_LEVEL_ALPHABETIC" };
+    key <AC01> { [ a,            A,              aogonek,         Aogonek    ] };
     key <AC02> { [ o,            O,              oacute,          Oacute     ] };
     key <AC03> { [ e,            E,              eogonek,         Eogonek    ] };
 

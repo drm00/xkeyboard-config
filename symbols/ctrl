@@ -51,8 +51,11 @@ xkb_symbols "menu_rctrl" {
 // Right Alt key functions as another right Ctrl.
 partial modifier_keys
 xkb_symbols "ralt_rctrl" {
-    replace key <RALT> { type[Group1] = "TWO_LEVEL",
-                         symbols[Group1] = [ Control_R, Control_R ] };
+    replace key <RALT> {
+        type[Group1] = "TWO_LEVEL",
+        symbols[Group1] = [ Control_R, Control_R ],
+	actions[Group1] = [ SetMods(modifiers=Control, clearLocks), SetMods(modifiers=Control, clearLocks) ]
+    };
     modifier_map Control { <RALT> };
 };
 

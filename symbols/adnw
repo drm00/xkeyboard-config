@@ -1,0 +1,51 @@
+partial modifier_keys
+xkb_symbols "cutcopypaste" {
+    key.type[Group1] = "ADNW_MOD4L";
+    key <LCTL>  { [ Control_L, 0x110AA01, Control_L, 0x110AA01 ] };
+    key <LWIN>	{ [ Super_L,   0x110AA02, Super_L,   0x110AA02 ] };
+    key.type[Group1] = "EIGHT_LEVEL";
+    key <LALT>	{ [ Alt_L, Meta_L, Alt_L, Meta_L, 0x110AA03, Meta_L, Alt_L, Meta_L ] };
+};
+
+partial keypad_keys
+xkb_symbols "ebene4_direkt" {
+    key <NMLK> { [ Tab,      ISO_Left_Tab, equal,    NoSymbol, NoSymbol,     NoSymbol,     NoSymbol, NoSymbol ] };
+    key <AE04> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, Begin,        Begin,        NoSymbol, NoSymbol ] };
+    key <AE08> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, Tab,          ISO_Left_Tab, NoSymbol, NoSymbol ] };
+    key <AE09> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, KP_Divide,    KP_Divide,    NoSymbol, NoSymbol ] };
+    key <AE10> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, KP_Multiply,  KP_Multiply,  NoSymbol, NoSymbol ] };
+    key <AE11> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, KP_Subtract,  KP_Subtract,  NoSymbol, NoSymbol ] };
+    key <AD04> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, Delete,       Delete,       NoSymbol, NoSymbol ] };
+    key <AB04> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, Return,       Return,       NoSymbol, NoSymbol ] };
+    key <AD01> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, Prior,        Prior,        NoSymbol, NoSymbol ] };
+    key <AD02> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, BackSpace,    BackSpace,    NoSymbol, NoSymbol ] };
+    key <AD03> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, Up,           Up,           NoSymbol, NoSymbol ] };
+    key <AD05> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, Next,         Next,         NoSymbol, NoSymbol ] };
+    key <AD07> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, KP_7,         KP_7,         NoSymbol, NoSymbol ] };
+    key <AD08> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, KP_8,         KP_8,         NoSymbol, NoSymbol ] };
+    key <AD09> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, KP_9,         KP_9,         NoSymbol, NoSymbol ] };
+    key <AD10> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, KP_Add,       KP_Add,       NoSymbol, NoSymbol ] };
+    key <AC01> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, Home,         Home,         NoSymbol, NoSymbol ] };
+    key <AC02> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, Left,         Left,         NoSymbol, NoSymbol ] };
+    key <AC03> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, Down,         Down,         NoSymbol, NoSymbol ] };
+    key <AC04> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, Right,        Right,        NoSymbol, NoSymbol ] };
+    key <AC05> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, End,          End,          NoSymbol, NoSymbol ] };
+    key <AC07> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, KP_4,         KP_4,         NoSymbol, NoSymbol ] };
+    key <AC08> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, KP_5,         KP_5,         NoSymbol, NoSymbol ] };
+    key <AC09> { [ NoSymbol, NoSymbol,     minus,    NoSymbol, KP_6,         KP_6,         NoSymbol, NoSymbol ] };
+    key <AC10> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, KP_Separator, comma,        NoSymbol, NoSymbol ] };
+    key <AC10> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, period,       KP_Decimal,   NoSymbol, NoSymbol ] };
+    key <AB01> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, Escape,       Escape,       NoSymbol, NoSymbol ] };
+    key <AB02> { [ NoSymbol, NoSymbol,     dollar,   NoSymbol, Tab,          Tab,          NoSymbol, NoSymbol ] };
+    key <AB03> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, Insert,       Insert,       NoSymbol, NoSymbol ] };
+    key <AB05> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, Undo,         Redo,         NoSymbol, NoSymbol ] };
+    key <AB06> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, colon,        NoSymbol,     NoSymbol, NoSymbol ] };
+    key <AB07> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, KP_1,         KP_1,         NoSymbol, NoSymbol ] };
+    key <AB08> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, KP_2,         KP_2,         NoSymbol, NoSymbol ] };
+    key <AB09> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, KP_3,         KP_3,         NoSymbol, NoSymbol ] };
+    key <SPCE> { [ NoSymbol, NoSymbol,     NoSymbol, NoSymbol, KP_0,         KP_0,         NoSymbol, NoSymbol ] };
+    key  <KP5> { [ NoSymbol, NoSymbol,     colon,    NoSymbol, NoSymbol,     NoSymbol,     NoSymbol, NoSymbol ] };
+    key  <KP0> { [ NoSymbol, NoSymbol,     percent,  NoSymbol, NoSymbol,     NoSymbol,     NoSymbol, NoSymbol ] };
+    key <KPDL> { [ NoSymbol, period,       comma,    NoSymbol, NoSymbol,     NoSymbol,     NoSymbol, NoSymbol ] };
+};
+

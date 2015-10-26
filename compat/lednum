@@ -5,7 +5,7 @@ default partial xkb_compatibility "num_lock" {
     indicator "Num Lock" {
 	!allowExplicit;
 	whichModState= Locked;
-	modifiers= NumLock;
+	modifiers= Mod2;
     };
 };
 

@@ -4,8 +4,6 @@ default xkb_types "basic" {
     // three of the four required key types.
     // The fourth type "KEYPAD" is defined in the "numpad" file.
 
-    virtual_modifiers NumLock;
-
     type "ONE_LEVEL" {
 	modifiers = None;
 	map[None] = Level1;
@@ -27,4 +25,11 @@ default xkb_types "basic" {
 	level_name[Level2] = "Caps";
     };
 
+    type "KEYPAD" {
+        modifiers= Shift+Mod2;
+        map[Shift]= Level2;
+        map[Mod2]= Level2;
+        level_name[Level1]= "Base";
+        level_name[Level2]= "Number";
+    };
 };

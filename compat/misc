@@ -98,6 +98,22 @@ default partial xkb_compatibility "misc" {
 	action = SetMods(modifiers=Hyper);
     };
 
+    interpret Shift_L {
+        action = SetMods(modifiers = Shift);
+    };
+
+    interpret Shift_R {
+        action = SetMods(modifiers = Shift);
+    };
+
+    interpret Control_L {
+        action = SetMods(modifiers=Control);
+    };
+
+    interpret Control_R {
+        action = SetMods(modifiers=Control);
+    };
+
     // Sets the "ScrollLock" virtual modifier and
     // makes it actually lock when pressed.  Sets
     // up a map for the scroll lock indicator.
@@ -108,7 +124,53 @@ default partial xkb_compatibility "misc" {
 
     include "ledscroll"
 
-    include "misc(assign_shift_left_action)"
+    interpret.repeat= No;
+    interpret 0x110AA01 { action= Redirect(key=<DELE>, clearMods=Lock+Control+Mod1+Mod2+Mod3+Mod4+Mod5, Mods=Shift); };
+    interpret 0x110AA02 { action= Redirect(key=<INS>,  clearMods=Lock+Shift+Mod1+Mod2+Mod3+Mod4+Mod5, Mods=Control); };
+    interpret 0x110AA03 { action= Redirect(key=<INS>,  clearMods=Lock+Control+Mod1+Mod2+Mod3+Mod4+Mod5, Mods=Shift); };
+
+    interpret.repeat= True;
+    interpret 0x110AA04 { action= Redirect(key=<KP0>,  clearMods=Mod2+Mod3+Shift); };
+    interpret 0x110AB07 { action= Redirect(key=<KP1>,  clearMods=Mod2+Mod3+Shift); };
+    interpret 0x110AB08 { action= Redirect(key=<KP2>,  clearMods=Mod2+Mod3+Shift); };
+    interpret 0x110AB09 { action= Redirect(key=<KP3>,  clearMods=Mod2+Mod3+Shift); };
+    interpret 0x110AC07 { action= Redirect(key=<KP4>,  clearMods=Mod2+Mod3+Shift); };
+    interpret 0x110AC08 { action= Redirect(key=<KP5>,  clearMods=Mod2+Mod3+Shift); };
+    interpret 0x110AC09 { action= Redirect(key=<KP6>,  clearMods=Mod2+Mod3+Shift); };
+    interpret 0x110AC10 { action= Redirect(key=<KPDL>, clearMods=Mod2+Mod3+Shift); };
+    interpret 0x110AC11 { action= Redirect(key=<KPPT>, clearMods=Mod2+Mod3+Shift); };
+    interpret 0x110AD07 { action= Redirect(key=<KP7>,  clearMods=Mod2+Mod3+Shift); };
+    interpret 0x110AD08 { action= Redirect(key=<KP8>,  clearMods=Mod2+Mod3+Shift); };
+    interpret 0x110AD09 { action= Redirect(key=<KP9>,  clearMods=Mod2+Mod3+Shift); };
+    interpret 0x110AD10 { action= Redirect(key=<KPAD>, clearMods=Mod2+Mod3); };
+    interpret 0x110AE09 { action= Redirect(key=<KPDV>, clearMods=Mod2+Mod3); };
+    interpret 0x110AE10 { action= Redirect(key=<KPMU>, clearMods=Mod2+Mod3); };
+    interpret 0x110AE11 { action= Redirect(key=<KPSU>, clearMods=Mod2+Mod3); };
+    interpret 0x110AB01 { action= Redirect(key=<ESC>,  clearMods=Mod2+Mod3); };
+    interpret 0x110AB02 { action= Redirect(key=<TAB>,  clearMods=Mod2+Mod3); };
+    interpret 0x110AB03 { action= Redirect(key=<INS>,  clearMods=Mod2+Mod3); };
+    interpret 0x110AB04 { action= Redirect(key=<RTRN>, clearMods=Mod2+Mod3); };
+    interpret 0x110AB05 { action= Redirect(key=<UNDO>, clearMods=Mod2+Mod3); };
+    interpret 0x110AC01 { action= Redirect(key=<HOME>, clearMods=Mod2+Mod3); };
+    interpret 0x110AC02 { action= Redirect(key=<LEFT>, clearMods=Mod2+Mod3); };
+    interpret 0x110AC03 { action= Redirect(key=<DOWN>, clearMods=Mod2+Mod3); };
+    interpret 0x110AC04 { action= Redirect(key=<RGHT>, clearMods=Mod2+Mod3); };
+    interpret 0x110AC05 { action= Redirect(key=<END>,  clearMods=Mod2+Mod3); };
+    interpret 0x110AD01 { action= Redirect(key=<PGUP>, clearMods=Mod2+Mod3); };
+    interpret 0x110AD02 { action= Redirect(key=<BKSP>, clearMods=Mod2+Mod3); };
+    interpret 0x110AD03 { action= Redirect(key=<UP>,   clearMods=Mod2+Mod3); };
+    interpret 0x110AD04 { action= Redirect(key=<DELE>, clearMods=Mod2+Mod3); };
+    interpret 0x110AD05 { action= Redirect(key=<PGDN>, clearMods=Mod2+Mod3); };
+    interpret 0x110AE04 { action= Redirect(key=<AB11>, clearMods=Mod2+Mod3); };
+
+    interpret 0x100002C { action= Redirect(key=<AB04>, clearMods=Mod2+Mod3+Mod5+Shift); };
+    interpret 0x1000024 { action= Redirect(key=<AE06>, clearMods=Mod2+Mod3+Mod5, Mods=Shift); };
+    interpret 0x1000025 { action= Redirect(key=<AB07>, clearMods=Mod2+Mod3+Shift, Mods=Mod5); };
+    interpret 0x100002D { action= Redirect(key=<AE11>, clearMods=Mod2+Mod3+Mod5+Shift); };
+    interpret 0x100002E { action= Redirect(key=<AD04>, clearMods=Mod2+Mod3+Mod5+Shift); };
+    interpret 0x100003A { action= Redirect(key=<AC10>, clearMods=Mod2+Mod3+Shift, Mods=Mod5); };
+    interpret 0x100003D { action= Redirect(key=<AD09>, clearMods=Mod2+Mod3+Shift, Mods=Mod5); };
+
 };
 
 partial xkb_compatibility "assign_shift_left_action" {

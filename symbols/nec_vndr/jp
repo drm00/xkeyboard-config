@@ -157,5 +157,5 @@ default xkb_symbols "pc98" {
     modifier_map Lock   { Caps_Lock };
     modifier_map Control{ Control_L };
     modifier_map Mod1   { Alt_L };
-    modifier_map Mod2   { Mode_switch };
+    modifier_map Mod5   { Mode_switch };
 };

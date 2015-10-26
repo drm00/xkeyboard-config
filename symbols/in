@@ -742,8 +742,9 @@ xkb_symbols "kan" {
     key <AB10> { [  U0caf, U0040	] };
 
     key <RALT> {
+        type[Group1] = "TWO_LEVEL",
 	symbols[Group1] = [ Mode_switch, Multi_key ],
-	virtualMods = AltGr
+	actions[Group1] = [ SetGroup(group=+1), NoAction() ]
     };
     include "rupeesign(4)"
     include "level3(ralt_switch)"
@@ -1042,8 +1043,9 @@ xkb_symbols "ori" {
     key <AB10> { [  U0b2f, U0040	] };
 
     key <RALT> {
+        type[Group1] = "TWO_LEVEL",
 	symbols[Group1] = [ Mode_switch, Multi_key ],
-	virtualMods = AltGr
+	actions[Group1] = [ SetGroup(group=+1), NoAction() ]
     };
     include "rupeesign(4)"
     include "level3(ralt_switch)"
@@ -1421,9 +1423,10 @@ xkb_symbols "tel" {
     key <AB09> { [  period    				] };
     key <AB10> { [  U0c2f, U0040	] };
 
-    key <RALT> {        
+    key <RALT> {
+        type[Group1] = "TWO_LEVEL",
         symbols[Group1] = [ Mode_switch, Multi_key ],
-        virtualMods = AltGr
+	actions[Group1] = [ SetGroup(group=+1), NoAction() ]
     };
     include "rupeesign(4)"
     include "level3(ralt_switch)"

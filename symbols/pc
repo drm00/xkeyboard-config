@@ -22,26 +22,30 @@ xkb_symbols "pc105" {
     key <CAPS> {	[ Caps_Lock		]	};
     key <NMLK> {	[ Num_Lock 		]	};
 
-    key <LFSH> {	[ Shift_L		]	};
+    key <LFSH> {
+        symbols[Group1]= [ Shift_L		],
+        actions[Group1] = [ SetMods(modifiers=Shift, clearLocks) ]
+    };
     key <LCTL> {	[ Control_L		]	};
     key <LWIN> {	[ Super_L		]	};
 
-    key <RTSH> {	[ Shift_R		]	};
+    key <RTSH> {
+        symbols[Group1]=  [ Shift_R		],
+        actions[Group1] = [ SetMods(modifiers=Shift, clearLocks) ]
+    };
     key <RCTL> {	[ Control_R		]	};
     key <RWIN> {	[ Super_R		]	};
     key <MENU> {	[ Menu			]	};
 
-    // Beginning of modifier mappings.
-    modifier_map Shift  { Shift_L, Shift_R };
-    modifier_map Lock   { Caps_Lock };
-    modifier_map Control{ Control_L, Control_R };
-    modifier_map Mod2   { Num_Lock };
-    modifier_map Mod4   { Super_L, Super_R };
+    // begin modifier mappings
+    modifier_map Shift  { Shift_R };
+    modifier_map Control { Control_L, Control_R };
 
-    // Fake keys for virtual<->real modifiers mapping:
-    key <LVL3> {	[ ISO_Level3_Shift	]	};
+    //  Fake keys for virtual<->real modifiers mapping 
+    key <LVL3> {	[ Num_Lock	]	};
+    modifier_map Mod2   { <LVL3> };
     key <MDSW> {	[ Mode_switch 		]	};
-    modifier_map Mod5   { <LVL3>, <MDSW> };
+    modifier_map Mod5   { <MDSW> };
 
     key <ALT>  {	[ NoSymbol, Alt_L	]	};
     include "altwin(meta_alt)"

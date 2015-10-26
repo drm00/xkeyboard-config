@@ -1,6 +1,5 @@
 default xkb_types "complete" {
     include "basic"
-    include "mousekeys"
     include "pc"
     include "iso9995"
     include "level5"

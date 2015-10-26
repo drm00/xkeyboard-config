@@ -30,6 +30,7 @@ xkb_symbols "basic" {
     key <AD11> {	[ bracketleft,	braceleft	]	};
     key <AD12> {	[ bracketright,	braceright	]	};
 
+    key <CAPS> { 	[ Caps_Lock	]	};
     key <AC01> {	[	  a,	A 		]	};
     key <AC02> {	[	  s,	S		]	};
     key <AC03> {	[	  d,	D		]	};

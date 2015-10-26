@@ -2,55 +2,31 @@
 // to provide reasonable default behavior.
 
 default partial xkb_compatibility "default" {
-
-    virtual_modifiers  LevelFive;
-
     interpret.repeat= False;
     setMods.clearLocks= True;
     latchMods.clearLocks= True;
     latchMods.latchToLock= True;
 
-    interpret ISO_Level5_Shift+Any {
-	useModMapMods= level1;
-	virtualModifier= LevelFive;
-	action= SetMods(modifiers=LevelFive);
-    };
-
     interpret ISO_Level5_Shift {
-	action= SetMods(modifiers=LevelFive);
-    };
-
-    interpret ISO_Level5_Latch+Any {
-	useModMapMods= level1;
-	virtualModifier= LevelFive;
-	action= LatchMods(modifiers=LevelFive);
+	action= SetMods(modifiers=Mod3);
     };
 
     interpret ISO_Level5_Latch {
-	action= LatchMods(modifiers=LevelFive);
-    };
-
-    interpret ISO_Level5_Lock+Any {
-	useModMapMods= level1;
-	virtualModifier= LevelFive;
-	action= LockMods(modifiers=LevelFive);
+	action= LatchMods(modifiers=Mod3);
     };
 
     interpret ISO_Level5_Lock {
-	action= LockMods(modifiers=LevelFive);
+	action= LockMods(modifiers=Mod3);
     };
 };
 
-partial xkb_compatibility "level5_lock" {
+partial xkb_compatibility "level5_lock"  {
     // This defines a Level5-Lock using the NumLock real modifier
     // in order to create arbitrary level-behaviour, which would
     // not be possible with the virtual modifier.
     // See also: types/level5 : EIGHT_LEVEL_LEVEL_FIVE_LOCK
-    // See also: symbols/level5(lock)
-
-    virtual_modifiers  NumLock;
 
     interpret ISO_Level5_Lock {
-	action = LockMods(modifiers = NumLock);
+        action = LockMods(modifiers=Mod2);
     };
 };

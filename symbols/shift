@@ -3,6 +3,7 @@ partial modifier_keys
 xkb_symbols "breaks_caps" {
     key <LFSH> {
 	type = "ALPHABETIC",
+        symbols[Group1] = [ Shift_L, Shift_L ],
     	actions [Group1] = [
 	    SetMods(modifiers=Shift),
 	    SetMods(modifiers=Shift+Lock,clearLocks)
@@ -10,6 +11,7 @@ xkb_symbols "breaks_caps" {
     };
     key <RTSH> {
 	type = "ALPHABETIC",
+        symbols[Group1] = [ Shift_R, Shift_R ],
 	actions [Group1] = [
 	    SetMods(modifiers=Shift),
 	    SetMods(modifiers=Shift+Lock,clearLocks)
@@ -23,7 +25,8 @@ partial modifier_keys
 xkb_symbols "lshift_both_capslock" {
   key <LFSH> {
     type[Group1]="TWO_LEVEL",
-    symbols[Group1] = [ Shift_L, Caps_Lock ]
+    symbols[Group1] = [ Shift_L,                              Shift_L                  ],
+    actions[Group1] = [ SetMods(modifiers=Shift, clearLocks), LockMods(modifiers=Lock) ]
   };
 };
 // Toggle CapsLock when pressed together with the other Shift key.
@@ -31,7 +34,8 @@ partial modifier_keys
 xkb_symbols "rshift_both_capslock" {
   key <RTSH> {
     type[Group1]="TWO_LEVEL",
-    symbols[Group1] = [ Shift_R, Caps_Lock ]
+    symbols[Group1] = [ Shift_R,                              Shift_R                  ],
+    actions[Group1] = [ SetMods(modifiers=Shift, clearLocks), LockMods(modifiers=Lock) ]
   };
 };
 partial modifier_keys
@@ -40,13 +44,13 @@ xkb_symbols "both_capslock" {
   include "shift(rshift_both_capslock)"
 };
 
-
 // Set CapsLock when pressed with the other Shift key, release it when pressed alone.
 partial modifier_keys
 xkb_symbols "lshift_both_capslock_cancel" {
   key <LFSH> {
     type[Group1]="ALPHABETIC",
-    symbols[Group1] = [ Shift_L, Caps_Lock ]
+    symbols[Group1] = [ Shift_L,                              Shift_L                  ],
+    actions[Group1] = [ SetMods(modifiers=Shift, clearLocks), LockMods(modifiers=Lock) ]
   };
 };
 // Set CapsLock when pressed with the other Shift key, release it when pressed alone.
@@ -54,7 +58,8 @@ partial modifier_keys
 xkb_symbols "rshift_both_capslock_cancel" {
   key <RTSH> {
     type[Group1]="ALPHABETIC",
-    symbols[Group1] = [ Shift_R, Caps_Lock ]
+    symbols[Group1] = [ Shift_R,                              Shift_R                  ],
+    actions[Group1] = [ SetMods(modifiers=Shift, clearLocks), LockMods(modifiers=Lock) ]
   };
 };
 partial modifier_keys
@@ -69,7 +74,8 @@ partial modifier_keys
 xkb_symbols "lshift_both_shiftlock" {
   key <LFSH> {
     type[Group1]="TWO_LEVEL",
-    symbols[Group1] = [ Shift_L, Shift_Lock ]
+    symbols[Group1] = [ Shift_L,                              Shift_L                   ],
+    actions[Group1] = [ SetMods(modifiers=Shift, clearLocks), LockMods(modifiers=Shift) ]
   };
 };
 // Toggle ShiftLock when pressed together with the other Shift key.
@@ -77,7 +83,8 @@ partial modifier_keys
 xkb_symbols "rshift_both_shiftlock" {
   key <RTSH> {
     type[Group1]="TWO_LEVEL",
-    symbols[Group1] = [ Shift_R, Shift_Lock ]
+    symbols[Group1] = [ Shift_R,                              Shift_R                   ],
+    actions[Group1] = [ SetMods(modifiers=Shift, clearLocks), LockMods(modifiers=Shift) ]
   };
 };
 partial modifier_keys

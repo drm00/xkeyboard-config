@@ -41,10 +41,10 @@ default partial xkb_compatibility "basic" {
         action = SwitchScreen(Screen=12, !SameServer);
     };
 
-    interpret XF86LogGrabInfo {
+    interpret 0x1008FE25 {
         action = Private(type=0x86, data="PrGrbs");
     };
-    interpret XF86LogWindowTree {
+    interpret 0x1008FE24 {
         action = Private(type=0x86, data="PrWins");
     };
 

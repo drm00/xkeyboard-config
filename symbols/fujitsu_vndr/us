@@ -135,8 +135,8 @@ xkb_symbols "basic" {
 
     modifier_map Shift  	{ Shift_R };
     modifier_map Mod1   	{ Meta_L, Meta_R };
-    modifier_map Mod2   	{ Mode_switch };
-    modifier_map Mod3   	{ Alt_L };
-    modifier_map Mod4   	{ Num_Lock };
+    modifier_map Mod5   	{ Mode_switch };
+    modifier_map Mod4   	{ Alt_L };
+    modifier_map Mod2   	{ Num_Lock };
     modifier_map Mod5   	{ F13, F18, F20 };
 };

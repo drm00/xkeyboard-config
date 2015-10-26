@@ -85,5 +85,5 @@ xkb_symbols "nwp5461" {
     // End "Keypad" section
 
     modifier_map Shift  	{ Shift_R };
-    modifier_map Mod3   	{ Alt_L };
+    modifier_map Mod1   	{ Alt_L };
 };

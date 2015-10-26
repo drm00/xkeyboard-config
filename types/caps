@@ -10,15 +10,15 @@ partial xkb_types "internal" {
     };
 
     type "FOUR_LEVEL_ALPHABETIC" {
-	modifiers = Shift+Lock+LevelThree;
+	modifiers = Shift+Lock+Mod5;
 	map[None] = Level1;
 	map[Shift] = Level2;
 	preserve[Lock] = Lock;
-	map[LevelThree] = Level3;
-	map[Shift+LevelThree] = Level4;
-	map[Lock+LevelThree] =  Level3;
-	map[Lock+Shift+LevelThree] = Level3;
-	preserve[Lock+LevelThree] = Lock;
+	map[Mod5] = Level3;
+	map[Shift+Mod5] = Level4;
+	map[Lock+Mod5] =  Level3;
+        map[Lock+Shift+Mod5] = Level3;
+	preserve[Lock+Mod5] = Lock;
 	level_name[Level1] = "Base";
 	level_name[Level2] = "Shift";
 	level_name[Level3] = "Alt Base";
@@ -26,16 +26,16 @@ partial xkb_types "internal" {
     };
 
     type "FOUR_LEVEL_SEMIALPHABETIC" {
-	modifiers = Shift+Lock+LevelThree;
+	modifiers = Shift+Lock+Mod5;
 	map[None] = Level1;
 	map[Shift] = Level2;
 	preserve[Lock] = Lock;
-	map[LevelThree] = Level3;
-	map[Shift+LevelThree] = Level4;
-	map[Lock+LevelThree] =  Level3;
-	map[Lock+Shift+LevelThree] = Level4;
-	preserve[Lock+LevelThree] = Lock;
-	preserve[Lock+Shift+LevelThree] = Lock;
+	map[Mod5] = Level3;
+	map[Shift+Mod5] = Level4;
+	map[Lock+Mod5] =  Level3;
+        map[Lock+Shift+Mod5] = Level4;
+	preserve[Lock+Mod5] = Lock;
+	preserve[Lock+Shift+Mod5] = Lock;
 	level_name[Level1] = "Base";
 	level_name[Level2] = "Shift";
 	level_name[Level3] = "Alt Base";
@@ -54,11 +54,11 @@ partial xkb_types "internal_nocancel" {
     };
 
     type "FOUR_LEVEL_ALPHABETIC" {
-	modifiers = Shift+LevelThree;
+	modifiers = Shift+Mod5;
 	map[None] = Level1;
 	map[Shift] = Level2;
-	map[LevelThree] = Level3;
-	map[Shift+LevelThree] = Level4;
+	map[Mod5] = Level3;
+	map[Shift+Mod5] = Level4;
 	level_name[Level1] = "Base";
 	level_name[Level2] = "Shift";
 	level_name[Level3] = "Alt Base";
@@ -67,11 +67,11 @@ partial xkb_types "internal_nocancel" {
 
     type "FOUR_LEVEL_SEMIALPHABETIC" {
         // the same as FOUR_LEVEL_ALPHABETIC
-	modifiers = Shift+LevelThree;
+	modifiers = Shift+Mod5;
 	map[None] = Level1;
 	map[Shift] = Level2;
-	map[LevelThree] = Level3;
-	map[Shift+LevelThree] = Level4;
+	map[Mod5] = Level3;
+	map[Shift+Mod5] = Level4;
 	level_name[Level1] = "Base";
 	level_name[Level2] = "Shift";
 	level_name[Level3] = "Alt Base";
@@ -91,14 +91,14 @@ partial xkb_types "shift" {
     };
 
     type "FOUR_LEVEL_ALPHABETIC" {
-	modifiers = Shift+Lock+LevelThree;
+	modifiers = Shift+Lock+Mod5;
 	map[None] = Level1;
 	map[Shift] = Level2;
 	map[Lock]  = Level2;
-	map[LevelThree] = Level3;
-	map[Shift+LevelThree] = Level4;
-	map[Lock+LevelThree] =  Level4;
-	map[Shift+Lock+LevelThree] =  Level3;
+	map[Mod5] = Level3;
+	map[Shift+Mod5] = Level4;
+	map[Lock+Mod5] =  Level4;
+	map[Shift+Lock+Mod5] =  Level3;
 	level_name[Level1] = "Base";
 	level_name[Level2] = "Shift";
 	level_name[Level3] = "Alt Base";
@@ -106,16 +106,16 @@ partial xkb_types "shift" {
     };
 
     type "FOUR_LEVEL_SEMIALPHABETIC" {
-	modifiers = Shift+Lock+LevelThree;
+	modifiers = Shift+Lock+Mod5;
 	map[None] = Level1;
 	map[Shift] = Level2;
 	map[Lock]  = Level2;
-	map[LevelThree] = Level3;
-	map[Shift+LevelThree] = Level4;
-	map[Lock+LevelThree] =  Level3;
-	map[Lock+Shift+LevelThree] = Level4;
-	preserve[Lock+LevelThree] = Lock;
-	preserve[Lock+Shift+LevelThree] = Lock;
+	map[Mod5] = Level3;
+	map[Shift+Mod5] = Level4;
+	map[Lock+Mod5] =  Level3;
+        map[Lock+Shift+Mod5] = Level4;
+	preserve[Lock+Mod5] = Lock;
+	preserve[Lock+Shift+Mod5] = Lock;
 	level_name[Level1] = "Base";
 	level_name[Level2] = "Shift";
 	level_name[Level3] = "Alt Base";
@@ -136,15 +136,15 @@ partial xkb_types "shift_nocancel" {
     };
 
     type "FOUR_LEVEL_ALPHABETIC" {
-	modifiers = Shift+Lock+LevelThree;
+	modifiers = Shift+Lock+Mod5;
 	map[None] =  Level1;
 	map[Shift] = Level2;
 	map[Lock] =  Level2;
 	map[Shift+Lock] = Level2;
-	map[LevelThree] = Level3;
-	map[Shift+LevelThree] = Level4;
-	map[Lock+LevelThree] =  Level4;
-	map[Shift+Lock+LevelThree] = Level4;
+	map[Mod5] = Level3;
+	map[Shift+Mod5] = Level4;
+	map[Lock+Mod5] =  Level4;
+	map[Shift+Lock+Mod5] = Level4;
 	level_name[Level1] = "Base";
 	level_name[Level2] = "Shift";
 	level_name[Level3] = "Alt Base";
@@ -152,17 +152,17 @@ partial xkb_types "shift_nocancel" {
     };
 
     type "FOUR_LEVEL_SEMIALPHABETIC" {
-	modifiers = Shift+Lock+LevelThree;
+	modifiers = Shift+Lock+Mod5;
 	map[None] =  Level1;
 	map[Shift] = Level2;
 	map[Lock] =  Level2;
 	map[Shift+Lock] = Level2;
-	map[LevelThree] = Level3;
-	map[Shift+LevelThree] = Level4;
-	map[Lock+LevelThree] =  Level3;
-	map[Lock+Shift+LevelThree] = Level4;
-	preserve[Lock+LevelThree] = Lock;
-	preserve[Lock+Shift+LevelThree] = Lock;
+	map[Mod5] = Level3;
+	map[Shift+Mod5] = Level4;
+	map[Lock+Mod5] =  Level3;
+        map[Lock+Shift+Mod5] = Level4;
+	preserve[Lock+Mod5] = Lock;
+	preserve[Lock+Shift+Mod5] = Lock;
 	level_name[Level1] = "Base";
 	level_name[Level2] = "Shift";
 	level_name[Level3] = "Alt Base";

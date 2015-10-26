@@ -29,6 +29,7 @@ xkb_symbols "basic" {
     key <AD11>	{ [bracketleft,  braceleft, dead_diaeresis, dead_abovering ] };
     key <AD12>	{ [bracketright, braceright, dead_tilde,  dead_macron ]	};
 
+    key <CAPS>  { [ Caps_Lock	]	};
     key <AC01>	{ [         a,          A,           ae,           AE ]	};
     key <AC02>	{ [         s,          S,       ssharp,      section ]	};
     key <AC03>	{ [         d,          D,          eth,          ETH ]	};
@@ -43,6 +44,7 @@ xkb_symbols "basic" {
     key <TLDE>	{ [     grave, asciitilde,      notsign,      notsign ]	};
 
     key <BKSL>	{ [ backslash,        bar,   dead_grave,   dead_breve ]	};
+    key <LSGT>  { [      less,    greater,          bar,   brokenbar  ] };
     key <AB01>	{ [         z,          Z, guillemotleft,        less ]	};
     key <AB02>	{ [         x,          X, guillemotright,    greater ]	};
     key <AB03>	{ [         c,          C,         cent,    copyright ]	};

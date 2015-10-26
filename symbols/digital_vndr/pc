@@ -76,9 +76,8 @@ xkb_symbols "pc" {
     modifier_map Lock		{ Caps_Lock			};
     modifier_map Control	{ Control_L, Control_R		};
     modifier_map Mod1		{ Alt_L, Alt_R, Meta_L, Meta_R	};
-    modifier_map Mod3		{ Mode_switch			};
-    modifier_map Mod4		{ Num_Lock			};
-    modifier_map Mod5		{ Scroll_Lock			};
+    modifier_map Mod5		{ Mode_switch			};
+    modifier_map Mod2		{ Num_Lock			};
 
     // Common keys
     //
@@ -136,7 +135,7 @@ xkb_symbols "pc" {
     // "Keypad" keys
     //
     key <NMLK> {
-	type= "SHIFT+ALT",
+	type= "CTRL+ALT",
 	symbols[Group1]= [	  Num_Lock,Pointer_EnableKeys]
     };
     key <KPDV> {       [       KP_Divide ] };

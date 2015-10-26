@@ -52,7 +52,6 @@ default xkb_symbols "common" {
     modifier_map Control	{ Control_L, Control_R };
     modifier_map Mod1		{ Alt_L, Alt_R, Meta_L, Meta_R };
     modifier_map Mod2		{ Num_Lock };
-    modifier_map Mod3   	{ Scroll_Lock };
 
     // Additional alphanumeric keys
     key <LSGT>		{ [ less,	greater		] };
@@ -95,7 +94,7 @@ default xkb_symbols "common" {
 
     // "Keypad" keys
     key <KPF1>		{
-				type= "SHIFT+ALT",
+				type= "CTRL+ALT",
 				symbols[Group1]=[ KP_F1,Pointer_EnableKeys ]
 			};
     key <KPF2>		{ [ KP_F2			] };

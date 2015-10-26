@@ -27,6 +27,7 @@
 default  partial alphanumeric_keys
 xkb_symbols "basic" {
     name[Group1]= "Khmer (Cambodia)";
+    virtual_modifiers Alt;
 
 // there are four levels defined:
 //
@@ -89,7 +90,11 @@ xkb_symbols "basic" {
     key <AB10> { [ 0x10017ca,		question,		slash,		voidsymbol	] };
 
     key <SPCE> { [ 0x100200b,		space,			0x10000a0,	voidsymbol	] };
-    key <RALT> { [ Alt_R	] };
+    key <RALT> {
+        type[Group1] = "ONE_LEVEL",
+    	symbols[Group1]=  [ Alt_R		],
+        actions[Group1] = [ SetMods(modifiers=Alt, clearLocks) ]
+    };
 
 // third level with right-Alt
     include "level3(ralt_switch)"
